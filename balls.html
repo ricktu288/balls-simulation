@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Ball Simulation
+		</title>
+		<style>
+			canvas{
+				position: absolute;
+				left:0pt;
+				top:0pt
+			}
+			
+			div.panel{
+				position: absolute;
+				left:0pt;
+				bottom: 0pt;
+				width:100%;
+				background: #FFFEAF;
+				border-top: 8pt solid black;
+				padding-top: 10pt;
+				padding-bottom: 10pt;
+				font-size: 12pt;
+				white-space: nowrap;
+				overflow-x: scroll;
+			}
+			
+			.slider{
+				width:200pt;
+			}
+		</style>
+		<script src="main.js"></script>
+		<script src="RenderScene.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<image id="ballImage" src="ball.png" style="display:none"></image>
+		<image id="ballImage1" src="ball1.png" style="display:none"></image>
+		<div class="panel" id="panel">
+			<center>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								Radius:
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								<input id="Slider1" class="slider" type="range" min=1 max=100 step=1 value=39>
+							</td>
+							<td>
+								100
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Wall elasticity:
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								<input id="Slider2" class="slider" type="range" min=0 max=1 step=0.00001 value=0.95>
+							</td>
+							<td>
+								1
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Air resistance:
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								<input id="Slider4" class="slider" type="range" min=0 max=0.01 step=0.00001 value=0>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Gravity:
+							</td>
+							<td>
+								0
+							</td>
+							<td>
+								<input id="Slider3" class="slider" type="range" min=0 max=10 step=0.00001 value=3>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<input type="button" id="stepperUp" value="+">
+								<input type="button" id="stepperDown" value="-">
+								<label><input id="segment1" name="segmented" type="radio" checked>Free</label>
+								<label><input id="segment2" name="segmented" type="radio">Fixed</label>
+								<label><input id="segment3" name="segmented" type="radio">Connected</label>
+								<label><input id="segment4" name="segmented" type="radio">Spring</label>
+								<br>
+								<label><input id="switch1" type="checkbox">Click/Drag to add balls</label>
+								<input type="button" id="btnRestart" value="Remove All">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</center>
+		</div>
+	</body>
+</html>
