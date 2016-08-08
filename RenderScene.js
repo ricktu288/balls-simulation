@@ -244,8 +244,8 @@
 	{
 		this.x[this.num]=Math.random()*canvas.width;
 		this.y[this.num]=Math.random()*canvas.height;
-		this.Vx[this.num]=-10+10*Math.random();
-		this.Vy[this.num]=-10+10*Math.random();
+		this.Vx[this.num]=-5+10*Math.random();
+		this.Vy[this.num]=-5+10*Math.random();
 		this.ball_mode[this.num]=this.adding_mode;
 		this.num++;
 	},
